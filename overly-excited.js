@@ -24,23 +24,19 @@
 // Invoke the function and pass in the array
 addExcitement(sentence) */
 
+/* The learning objective of this exercise is to practice defining and using function arguments.
+
+Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an exclamation point. */
+
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (theWordArray) {
+function addExcitement (theWordArray, someCharacter) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
-        /*
-            If the current word's place (not index) in the array
-            is evenly divisible by 3, add an exclamation point
-            to the end of the word and then concatenate it to
-            `buildMeUp`.
-
-            Otherwise, just concatenate the word itself.
-         */
         buildMeUp += theWordArray[i]
         if((i+1) % 3 === 0) {
-            buildMeUp += `!`
+            buildMeUp += someCharacter
             
         } 
         buildMeUp += " ";
@@ -51,4 +47,4 @@ function addExcitement (theWordArray) {
 
 }
 
-addExcitement(sentence)
+addExcitement(sentence, "?")
