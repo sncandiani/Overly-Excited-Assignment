@@ -30,21 +30,22 @@ Add a new argument to the function so that a developer can specify which charact
 
 let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-function addExcitement (theWordArray, someCharacter) {
+function addExcitement (theWordArray, argAdd, number) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
         buildMeUp += theWordArray[i]
         if((i+1) % 3 === 0) {
-            buildMeUp += someCharacter
-            
+            for(let i = 0; i < number; i++) {
+                buildMeUp += argAdd
+            }
         } 
         buildMeUp += " ";
-
+        
         // Print buildMeUp to the console
         console.log(buildMeUp)
     }
 
 }
 
-addExcitement(sentence, "?")
+addExcitement(sentence, "*", 4)
